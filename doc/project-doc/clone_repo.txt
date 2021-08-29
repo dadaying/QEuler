@@ -1,0 +1,34 @@
+1.咱们的项目地址为：https://github.com/dadaying/QEuler.git；
+
+2.下载git客户端：https://git-scm.com/downloads，并完成install；
+
+3.鼠标右键找到git bash，运行git客户端，配置email和name：
+邮箱配置：git config --global user.email "user.email"
+用户名配置：git config --global user.name "user.name"
+git config --list 查看是否配置成功；
+
+4.生成ssh公钥和私钥：ssh-keygen -t rsa -b 4096 -C "user.email"
+
+5.测试ssh-agent是否启用：eval "$(ssh-agent -s)"；
+
+6.将ssh key放到ssh-agent中：ssh-add ~/.ssh/id_rsa；
+
+7.找到ssh pub，增加到github中，一个相对目录：~/.ssh/id_rsa.pub；
+
+8.clone项目：git clone https://github.com/dadaying/QEuler.git；
+
+9.配置远程的项目URL简写：
+查看远程仓库：git remote set --url
+修改URL：git remote set-url origin https://github.com/dadaying/QEuler.git
+查看远程仓库：git remote set --url
+
+10.关于lfs...
+
+11.push 代码超时：
+fatal: unable to access 'https://github.com/dadaying/QEuler.git/': Failed to connect to github.com port 443 after 21080 ms: Timed out
+解决办法：
+git config --global https.proxy
+git config --global --unset https.proxy
+
+12.push 代码遇到 SSL 问题：
+设置 http 与 ssl 的认证：git config --global http.sslVerify "false"
