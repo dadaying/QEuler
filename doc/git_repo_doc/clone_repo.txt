@@ -9,13 +9,13 @@ git config --list 查看是否配置成功；
 
 4.生成ssh公钥和私钥：ssh-keygen -t rsa -b 4096 -C "user.email"
 
-5.测试ssh-agent是否启用：eval "$(ssh-agent -s)"；
+5.测试ssh-agent是否启用：eval "$(ssh-agent -s)"
 
-6.将ssh key放到ssh-agent中：ssh-add ~/.ssh/id_rsa；
+6.将ssh key放到ssh-agent中：ssh-add ~/.ssh/id_rsa
 
-7.找到ssh pub，增加到github中，一个相对目录：~/.ssh/id_rsa.pub；
+7.找到ssh pub，增加到github中，一个相对目录：~/.ssh/id_rsa.pub
 
-8.clone项目：git clone https://github.com/dadaying/QEuler.git；
+8.clone项目：git clone https://github.com/dadaying/QEuler.git
 
 9.配置远程的项目URL简写：
 查看远程仓库：git remote set --url

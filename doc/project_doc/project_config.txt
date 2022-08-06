@@ -1,0 +1,22 @@
+1.gcc 与 g++ 的区别: https://blog.csdn.net/wuzheyan2008/article/details/119715526
+
+2.查看 gcc 与 g++ 版本: gcc --version
+
+3.gcc 命令: https://www.cnblogs.com/manch1n/p/10311987.html
+
+4.gcc --help
+
+5.vscode 执行代码生成的 exe 文件的自动删除: https://blog.csdn.net/altezhi/article/details/121915752
+1)下载 Code Runner 插件
+2)在 settings.json 文件中插入下面内容:
+"code-runner.executorMap": {
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt"
+},
+"code-runner.runInTerminal": true,
+"code-runner.saveFileBeforeRun": true,
+
+// TODO(dadaying):
+1.MinGW, GNU, C++
+2.g++ 调用生成的中间文件的路径指定与 git 或者 shell 自动过滤与删除
+3.bazel, docker, clang-formsat
