@@ -18,9 +18,8 @@ git config --list 查看是否配置成功；
 8.clone项目：git clone https://github.com/dadaying/QEuler.git
 
 9.配置远程的项目URL简写：
-查看远程仓库：git remote set --url
-修改URL：git remote set-url origin https://github.com/dadaying/QEuler.git
-查看远程仓库：git remote set --url
+查看远程仓库：git remote -v
+修改URL：git remote set-url origin git@github.com:dadaying/QEuler.git
 
 10.关于lfs...
 
