@@ -23,11 +23,13 @@ git config --list 查看是否配置成功；
 
 10.关于lfs...
 
-11.push 代码超时：
+11.push 代码超时:
 fatal: unable to access 'https://github.com/dadaying/QEuler.git/': Failed to connect to github.com port 443 after 21080 ms: Timed out
 解决办法：
 git config --global https.proxy
 git config --global --unset https.proxy
 
-12.push 代码遇到 SSL 问题：
+12.push 代码遇到 SSL 问题:
 设置 http 与 ssl 的认证：git config --global http.sslVerify "false"
+
+13.vscode 中安装 GitLens-Git supercharged 插件, 可以更清楚的查看代码关于 git 的一些记录

@@ -10,13 +10,53 @@
 1)下载 Code Runner 插件
 2)在 settings.json 文件中插入下面内容:
 "code-runner.executorMap": {
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt"
+        "c": "cd $dir && clang -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && clang++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt"
 },
 "code-runner.runInTerminal": true,
 "code-runner.saveFileBeforeRun": true,
 
+6.clang: LLVM 编译链中的前端, 与 g++ 所做的工作类似, 但是比较轻量、编译速度快、内存小, 并且其可以将代码转成 IR, 做到了跨平台
+
+7.LLVM: 编译器的系统框架，属于编译工具链，https://blog.csdn.net/qq_42633819/article/details/106988948
+
+8.MinGW: minimalist GNU Windows，是一些头文件和端口库的集合，该集合允许人们在没有第三方动态链接库的情况下使用 GCC（GNU Compiler C）产生 Windows32 程序，https://blog.csdn.net/qq_40748967/article/details/120512314
+
+9.GNU:开源软件包、工具链、计划、一个自由的操作系统，其内容完全以 GPL 的方式发布，https://blog.csdn.net/qq_43617936/article/details/104504992
+
+10.GPL：GNU General Public License，GNU 通用公共许可协议，派生作品以相同许可证发布
+
+11.在 vscode 中使用 clang 进行编译, 并设置 C++ 版本为 17：
+1) clang -v 来查看自己 vscode 中的 clang 版本，mac 中内置的 app xcode 中自带了一个 clang 版本，存储在 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin，如果没有 clang，使用 xcode-select --install 来安装
+2）查看 clang 官网与自己使用的 C++ 版本的匹配情况，如果使用 C++17，需要 clang 5 的版本
+3) 配置相关的 json 文件：
+vscode 使用 c++17:https://blog.csdn.net/yangyanghao/article/details/115445951
+vscode 官网教程：https://code.visualstudio.com/docs/cpp/config-clang-mac
+4）总体来说应该配置编译器 clang 的使用，点击 Terminal->Configure Default Build Task->C/C++:clang++ 来修改 task.jons 文件
+接着需要安装插件 C/C++ Clang Command Adapter，来修改 c++版本为 17
+需要注意的是 Code Runner 中的设置也需要修改过来
+
+12.vscode 插件：
+Bracket Pair Colorizer -> 彩虹括号
+C/C++
+C/C++ Clang Command Adapter
+Code Runner
+Include Autocomplete -> 头文件自动补全
+One Dark Pro -> 好看的主题
+Settings Sync -> 配置文件云同
+TabOut -> 按tab跳出括号或引号，很方便
+vscode-icons -> 好看的图标
+
+13.vacode 中的 json 文件：
+c_cpp_properties.json
+launch.json
+settings.json
+tasks.json
+
 // TODO(dadaying):
-1.MinGW, GNU, C++
-2.g++ 调用生成的中间文件的路径指定与 git 或者 shell 自动过滤与删除
-3.bazel, docker, clang-formsat
+1.熟悉 vscode 的一些 json 文件，了解它们的作用，考虑是否上传到代码库，以及项目在不同环境下的使用
+2.下载指定版本的 clang，应用到 vscode 中，可以更好的管控第三方库的版本
+3.研究 C++ 不同版本的使用，怎么在项目中使用 C++，下载 C++
+4.g++/clang 调用生成的中间文件的路径指定与 git 或者 shell 自动过滤与删除(生成的 exe 自动删除已经解决)
+5.proto, clang-format 第三方库的引用
+6.bazel, docker 的研究
