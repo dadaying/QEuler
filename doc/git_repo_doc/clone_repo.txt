@@ -33,3 +33,12 @@ git config --global --unset https.proxy
 设置 http 与 ssl 的认证：git config --global http.sslVerify "false"
 
 13.vscode 中安装 GitLens-Git supercharged 插件, 可以更清楚的查看代码关于 git 的一些记录
+
+14.git 查看远程所有tag：git ls-remote --tags origin
+
+15.git 查看本地所有 tag：git tag -l
+
+16.开启 vpn 后，网页可以访问外网，但是 git clone GitHub 仓库拉取不下来，此时需要设置 git 的 代理
+git config --global http.proxy 127.0.0.1:7890
+git config --global https.proxy 127.0.0.1:7890
+
