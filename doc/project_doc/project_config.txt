@@ -53,7 +53,11 @@ launch.json
 settings.json
 tasks.json
 
+14.删除 文件：在 settings.json 中添加："code-runner.ignoreSelection": true,
+
 // TODO(dadaying):
+proto文件的IO、proto文件的自动编译、项目绝对路径、cmake使用、vacode 的 run code 怎么回到之前的路径
+
 1.熟悉 vscode 的一些 json 文件，了解它们的作用，考虑是否上传到代码库，以及项目在不同环境下的使用
 2.下载指定版本的 clang，应用到 vscode 中，可以更好的管控第三方库的版本
 3.研究 C++ 不同版本的使用，怎么在项目中使用 C++，下载 C++

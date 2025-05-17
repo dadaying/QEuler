@@ -1,0 +1,7 @@
+function(add_test name)
+    add_executable(${name} ${name}.cc)
+    target_include_directories(${name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/googletest/include)
+    target_link_directories(${name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/googletest/lib)
+    target_link_libraries(${name} gtest)
+    install(TARGETS ${name} RUNTIME DESTINATION bin)
+endfunction()

@@ -11,22 +11,39 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# # Compiled Dynamic libraries
+# *.so
+# *.dylib
+# *.dll
 
 # Fortran module files
 *.mod
 *.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# # Compiled Static libraries
+# *.lai
+# *.la
+# *.a
+# *.lib
 
 # Executables
 *.exe
 *.out
 *.app
+
+# Build files
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+CMakeFiles
+install_manifest.txt
+build_x86
+
+# Core dumps
+*.core
+
+# Log files
+*.log
+
+# IDE files
+.vscode

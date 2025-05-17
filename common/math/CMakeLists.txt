@@ -1,0 +1,1 @@
+add_test(vec_2_test)
