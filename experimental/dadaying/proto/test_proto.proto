@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package experiment.dadaying;
+
+message TestPersonProto {
+    optional string name = 1;
+    optional int32 age = 2;
+    optional bool is_boy = 3;
+    enum Type {
+        TEACHER = 0;
+        STUDENT = 1;
+    }
+    optional Type type = 4;
+}
+
+message TestClassProto {
+    repeated TestPersonProto persons = 1;
+    optional string name = 2;
+}

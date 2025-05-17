@@ -1,0 +1,18 @@
+1.CMAKE 官网：https://cmake.org/
+
+2.下载 CMAKE 网址：https://cmake.org/download/
+
+3.配置 CMAKE 环境变量：PATH="/Users/zhengyunqing/Desktop/third-party/cmake-3.24.0-macos-universal/CMake.app/Contents/bin":"$PATH"
+
+4.简单的编译 protobuf：（采用外部构建的方式）
+1）在protobuf源码路径下，创建build文件，并进入
+2）执行 cmake ..
+3）执行 cmake --build . --parallel 10
+4）执行 ctest --verbose
+5）执行 sudo cmake --install .
+6）安装之后的各个路径下的文件为：
+bin - 包含 protobuf protoc.exe编译器；
+include - 包含 C++ 头文件和 protobuf *.proto 文件；
+lib - 包含protobuf包的链接库和CMake配置文件。
+
+5.学习 CMAKE：https://blog.csdn.net/m0_46392035/article/details/124517032

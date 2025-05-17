@@ -1,0 +1,8 @@
+1.proto GitHub：https://github.com/protocolbuffers/protobuf#protocol-compiler-installation
+2.proto 项目地址：https://github.com/protocolbuffers/protobuf.git
+3.proto 官方文档：https://developers.google.com/protocol-buffers/
+4.proto 优缺点及编码原理：https://blog.csdn.net/Guzarish/article/details/120903097
+5.编写 proto 文件：
+syntax = "proto3";  // 引导 protoc，标志proto文件
+package experiment.dadaying;  // 类似命名空间
+6.生成C++对应的proto头文件和源文件：protoc proto_file_name --cpp_out=.
