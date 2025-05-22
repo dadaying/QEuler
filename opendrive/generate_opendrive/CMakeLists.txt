@@ -4,5 +4,9 @@ target_include_directories(generate_opendrive PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 target_link_directories(generate_opendrive PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/tinyxml2/lib)
 target_link_libraries(generate_opendrive tinyxml2)
 
+target_include_directories(generate_opendrive PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/sqlite/include)
+target_link_directories(generate_opendrive PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/sqlite/lib)
+target_link_libraries(generate_opendrive sqlite3)
+
 install(TARGETS generate_opendrive DESTINATION bin)
 install(FILES ../../scripts/run_generate_opendrive.sh DESTINATION scripts)

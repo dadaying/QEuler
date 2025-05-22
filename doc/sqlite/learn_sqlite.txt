@@ -1,0 +1,6 @@
+1.清晰的显示数据表的内容：
+.header on
+.mode column
+SELECT * FROM table_name;
+2.学习资料：
+https://www.runoob.com/sqlite/sqlite-select.html
