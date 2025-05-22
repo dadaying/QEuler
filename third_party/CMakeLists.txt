@@ -4,3 +4,6 @@ install(FILES ${googletest_libs} DESTINATION third_party)
 
 file(GLOB tinyxml2_libs ${CMAKE_CURRENT_SOURCE_DIR}/tinyxml2/lib/*.a)
 install(FILES ${tinyxml2_libs} DESTINATION third_party)
+
+file(GLOB sqlite_libs ${CMAKE_CURRENT_SOURCE_DIR}/sqlite/lib/*.a)
+install(FILES ${sqlite_libs} DESTINATION third_party)
