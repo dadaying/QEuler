@@ -22,4 +22,4 @@ if (ENABLE_EXPERIMENTAL)
     add_subdirectory(experimental)
 endif()
 
-add_subdirectory(opendrive)
+add_subdirectory(open_drive)

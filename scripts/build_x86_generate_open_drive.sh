@@ -15,10 +15,10 @@ fi
 mkdir -p "${build_dir}"
 cd "${build_dir}"
 
-cmake .. -DCMAKE_BUILD_TYPE=Debug      \
-         -DBUILD_DIR=${build_dir}      \
-         -DINSTALL_DIR="output"        \
-         -DBUILD_GENERATE_OPENDRIVE=ON \
+cmake .. -DCMAKE_BUILD_TYPE=Debug       \
+         -DBUILD_DIR=${build_dir}       \
+         -DINSTALL_DIR="output"         \
+         -DBUILD_GENERATE_OPEN_DRIVE=ON \
          -DENABLE_TEST=OFF
 
 make -j4
